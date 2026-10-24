@@ -1,6 +1,6 @@
 # Prototypes
 
-Small things I build to scratch an itch: Obsidian plugins, browser extensions, scripts and tools. Each one lives in its own folder with a README that says what it does, how to install it and how to make it better. Nothing here is a product; everything here works.
+Things I build for myself that other people could use too: Obsidian plugins, browser extensions, scripts and small tools. Each one lives in its own folder with a README that says what it does, how to install it and how to make it better. Nothing here is a product; everything here works.
 
 | Prototype | What it is | Status |
 | --- | --- | --- |
