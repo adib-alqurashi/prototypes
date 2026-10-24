@@ -1,0 +1,195 @@
+.study-timer {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 8px 0 16px;
+  background: var(--background-secondary);
+}
+.study-timer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.study-timer-clock {
+  font-size: 2.2em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.study-timer-btn {
+  min-width: 96px;
+  font-size: 1em;
+  padding: 6px 18px;
+  cursor: pointer;
+}
+.study-timer-btn.is-running {
+  background: var(--color-red);
+  color: var(--text-on-accent);
+}
+.study-timer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 8px;
+}
+.study-timer-card {
+  background: var(--background-primary);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.study-timer-value {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.study-timer-label {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.study-timer-sub {
+  font-size: 0.7em;
+  color: var(--text-faint);
+}
+.study-timer-sub:empty {
+  display: none;
+}
+.study-timer-bar {
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Calendar ---------- */
+.pcal {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 8px 0 16px;
+  background: var(--background-secondary);
+}
+.pcal-term {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.pcal-term-dates { color: var(--text-faint); }
+.pcal-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.pcal-head button { padding: 2px 10px; cursor: pointer; }
+.pcal-title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+.pcal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+}
+.pcal-wd {
+  text-align: center;
+  font-size: 0.75em;
+  color: var(--text-muted);
+  padding: 2px 0;
+}
+.pcal-day {
+  min-height: 78px;
+  background: var(--background-primary);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 3px 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.pcal-day:hover { border-color: var(--background-modifier-border-hover); }
+.pcal-day.is-other { opacity: 0.45; }
+.pcal-day.is-off { background: transparent; }
+.pcal-day.is-today { border-color: var(--interactive-accent); }
+.pcal-day.is-selected { box-shadow: inset 0 0 0 2px var(--interactive-accent); }
+.pcal-day-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+.pcal-num { font-size: 0.8em; font-weight: 600; }
+.pcal-day.is-today .pcal-num { color: var(--interactive-accent); }
+.pcal-mins {
+  font-size: 0.65em;
+  color: var(--color-green);
+  font-variant-numeric: tabular-nums;
+}
+.pcal-chip {
+  font-size: 0.68em;
+  line-height: 1.3;
+  padding: 1px 4px;
+  margin-top: 2px;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: var(--background-modifier-hover);
+}
+.pcal-chip.is-deadline { background: rgba(var(--color-red-rgb), 0.25); }
+.pcal-chip.is-event { background: rgba(var(--color-blue-rgb), 0.2); }
+.pcal-chip.is-done { opacity: 0.45; text-decoration: line-through; }
+.pcal-more { font-size: 0.65em; color: var(--text-faint); margin-top: 2px; }
+
+.pcal-panel {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+.pcal-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.pcal-panel-title { font-weight: 600; font-size: 1.05em; }
+.pcal-empty { color: var(--text-faint); font-size: 0.9em; }
+.pcal-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pcal-row:hover { background: var(--background-modifier-hover); }
+.pcal-row input { margin: 0; cursor: pointer; }
+.pcal-row.is-deadline .pcal-text { color: var(--color-red); }
+.pcal-row.is-event .pcal-text { color: var(--color-blue); }
+.pcal-row.is-done .pcal-text { text-decoration: line-through; opacity: 0.5; }
+.pcal-time { font-variant-numeric: tabular-nums; color: var(--text-muted); font-size: 0.9em; }
+.pcal-text { flex: 1; }
+.pcal-range, .pcal-file { font-size: 0.75em; color: var(--text-faint); }
+
+.pcal-add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 8px;
+  flex-wrap: wrap;
+}
+.pcal-add-time { width: 96px; }
+.pcal-add-text { flex: 1; min-width: 160px; }
+.pcal-add-dl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  cursor: pointer;
+}
